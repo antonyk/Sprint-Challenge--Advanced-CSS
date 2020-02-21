@@ -223,6 +223,22 @@ footer {
   .home .space-images img {
     width: 100%;
   }
+  @keyframes img-scroll {
+    from .sky,
+    from .launch {
+      display: none;
+    }
+    from .blast {
+      display: unset;
+    }
+    to .blast,
+    to .sky {
+      display: none;
+    }
+    to .launch {
+      display: unset;
+    }
+  }
 }
 .home .visit-planets {
   padding: 15px;
@@ -305,4 +321,21 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+.signup {
+  font-size: 1.6rem;
+}
+.signup h4 {
+  font-size: 1.8rem;
+}
+.signup .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px 48px;
+  background-color: lightgray;
+  border-radius: 5px;
+}
+.signup .container .field {
+  margin-top: 16px;
 }

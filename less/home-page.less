@@ -31,11 +31,34 @@
     }
 
     @media @phone {
+      // animation-name: img-scroll;
+      // animation-duration: 5s;
+
       .sky, .launch {
         display: none;
       }
       img {
         width: 100%;
+      }
+
+      @keyframes img-scroll {
+        from {
+          .sky, .launch {
+            display: none;
+          }
+          .blast {
+            display: unset;
+          }
+        }
+        to {
+          .blast, .sky {
+            display: none;
+          }
+          .launch {
+            display: unset;
+          }
+        }
+        
       }
     }
 
@@ -112,4 +135,40 @@
       }
     } // walk-img
   } // walk
+
+  
+
+
+
+
 }// home
+
+
+.signup {
+
+  font-size: 1.6rem;
+
+  h4 {
+    font-size: 1.8rem;
+  }
+
+  .container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 24px 48px;
+
+    background-color: lightgray;
+
+    border-radius: 5px;
+
+    .field {
+      margin-top: 16px;
+    }
+
+
+  }
+
+}
