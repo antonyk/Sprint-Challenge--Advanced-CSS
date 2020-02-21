@@ -1,1 +1,40 @@
 // Navigation code here
+
+
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.8;
+  height: 100px;
+
+  padding: 1% 0;
+  background-color: @nav-bg;
+
+  .logo {
+    font-size: @logo-size;
+    margin-bottom: 1%;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .menu {
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-link {
+    font-size: @menu-size;
+    color: @nav-menu-color;
+    margin: 0 2%;
+  }
+
+
+}

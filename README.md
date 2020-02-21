@@ -34,13 +34,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+A: An adaptive website will change its layout only based on specified screen or browser size breakpoints. A fully-responsive website is an adaptive website that also responds and changes its look not only at the specified breakpoints but also at all sizes inbetween and does so fluidly.
+
 2. Describe what it means to be mobile first vs desktop first.
+
+A: Mobile first design will start with a mobile website/app and then scale the design upwards to larger screens. Desktop first will start at the desktop screen size and scale down. In web development, we use the @media query "max-width" when scaling down (desktop-first) and "min-width" when scaling up in mobile-first.
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
+A: Setting a font-size of 62.5% makes gives it a font-size of 10px since the default is normally 16px (16 * 0.625 = 10). This allows us to then use rem units in out css and easily figure out what the font size would be. For example, after defaulting to 62.5%, then we can specify 1.6rem to get a 16px font size or 4rem to get 40px, etc.
+
 4. How would you describe preprocessing to someone new to CSS?
 
+A: Pre-processing in CSS is a way to use an interpreted language like Javascript or Ruby to describe your CSS in a more efficient and reusable way, which will then compile into full-fledged CSS before being read by the browser.
+
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+A: I like the ability to condense our css code using nesting, the use of functions and variables. Can't think of anything specific right now that is giving me trouble.
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 

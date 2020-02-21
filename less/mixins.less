@@ -1,1 +1,30 @@
 // Mixins Here
+
+.btn-div(@color:white, @bg-color:@btn-bg-color, @width:100%, @height:28px) {
+
+  font-size: @btn-font-size;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .small-radius-styling();
+  .set-colors(@color, @bg-color);
+  .set-size(@width, @height);
+
+}
+
+.small-radius-styling() {
+  border-radius: @small-radius;
+}
+
+.set-colors(@color, @bg-color) {
+  color: @color;
+  background-color: @bg-color;
+}
+
+.set-size(@width, @height)
+{
+  width: @width;
+  height: @height;
+}

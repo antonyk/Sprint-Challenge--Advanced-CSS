@@ -11,8 +11,12 @@
     p {
       padding:0 15px;
     }
+
+    img {
+      .small-radius-styling();
+    }
   
-  }
+  } // intro
 
   .space-images {
     display: flex;
@@ -25,7 +29,40 @@
       border-radius: 20px;
       height: 100%;
     }
-  }
+
+    @media @phone {
+      // animation-name: img-scroll;
+      // animation-duration: 5s;
+
+      .sky, .launch {
+        display: none;
+      }
+      img {
+        width: 100%;
+      }
+
+      @keyframes img-scroll {
+        from {
+          .sky, .launch {
+            display: none;
+          }
+          .blast {
+            display: unset;
+          }
+        }
+        to {
+          .blast, .sky {
+            display: none;
+          }
+          .launch {
+            display: unset;
+          }
+        }
+        
+      }
+    }
+
+  } // space-images
 
   .visit-planets {
     padding: 15px;
@@ -37,7 +74,7 @@
     p {
       margin-top: 13px;
     }
-  }
+  } // visit-planets
 
   .walk {
     margin-top: 60px;
@@ -46,8 +83,19 @@
     display: flex;
     justify-content: center;
 
+    @media @phone {
+      flex-direction: column-reverse;
+      border-top: none;
+      margin-top: 15px;
+      padding: 15px 15px;
+    }
+
     .walk-text {
       width: 50%;
+
+      @media @phone {
+        width: 100%;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -58,18 +106,69 @@
       }
 
       .btn {
+        .btn-div(white, @btn-bg-color, 10rem, 28px);
+
+        @media @phone {
+          .btn-div(white, @btn-bg-color, 100%, 50px);
+        }
       }
-    }
+
+      .btn:hover {
+        .set-colors(@btn-bg-color, white);
+      }
+    } //walk-text
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
+
+      @media @phone {
+        width: 100%;
+        margin-left: unset;
+        margin-bottom: 25px;
+      }
       
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
       }
-    }
-  }
+    } // walk-img
+  } // walk
+
+  
+
+
+
+
 }// home
+
+
+.signup {
+
+  font-size: 1.6rem;
+
+  h4 {
+    font-size: 1.8rem;
+  }
+
+  .container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 24px 48px;
+
+    background-color: lightgray;
+
+    border-radius: 5px;
+
+    .field {
+      margin-top: 16px;
+    }
+
+
+  }
+
+}
