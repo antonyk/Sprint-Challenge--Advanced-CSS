@@ -181,7 +181,7 @@ p {
 }
 .main-nav .menu-link {
   font-size: 2rem;
-  color: #5E6164;
+  color: #454A59;
   margin: 0 2%;
 }
 footer {
@@ -240,15 +240,19 @@ footer {
   margin-bottom: 26px;
 }
 .home .walk .walk-text .btn {
-  background-color: #22283A;
-  color: white;
   width: 10rem;
-  border-radius: 5px;
   height: 28px;
   font-size: 1.6rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
+  color: white;
+  background-color: #22283A;
+}
+.home .walk .walk-text .btn:hover {
+  color: #22283A;
+  background-color: white;
 }
 .home .walk .walk-img {
   width: 46%;

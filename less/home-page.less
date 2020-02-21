@@ -13,7 +13,7 @@
     }
 
     img {
-      border-radius: 5px;
+      .small-radius-styling();
     }
   
   }
@@ -62,7 +62,11 @@
       }
 
       .btn {
-        .btn-div(@btn-bg-color, white, 10rem)
+        .btn-div(white, @btn-bg-color, 10rem);
+      }
+
+      .btn:hover {
+        .set-colors(@btn-bg-color, white);
       }
     }
 

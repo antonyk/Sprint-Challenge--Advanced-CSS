@@ -1,11 +1,8 @@
 // Mixins Here
 
-.btn-div(@bg-color, @txt-color, @width) {
+.btn-div(@color, @bg-color, @width) {
 
-  background-color: @bg-color;
-  color: @txt-color;
   width: @width;
-  border-radius: 5px;
   height: 28px;
   font-size: @btn-font-size;
 
@@ -13,4 +10,16 @@
   justify-content: center;
   align-items: center;
 
+  .small-radius-styling();
+  .set-colors(@color, @bg-color);
+
+}
+
+.small-radius-styling() {
+  border-radius: @small-radius;
+}
+
+.set-colors(@color, @bg-color) {
+  color: @color;
+  background-color: @bg-color;
 }
