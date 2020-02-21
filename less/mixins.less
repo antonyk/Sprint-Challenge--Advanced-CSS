@@ -1,9 +1,7 @@
 // Mixins Here
 
-.btn-div(@color, @bg-color, @width) {
+.btn-div(@color:white, @bg-color:@btn-bg-color, @width:100%, @height:28px) {
 
-  width: @width;
-  height: 28px;
   font-size: @btn-font-size;
 
   display: flex;
@@ -12,6 +10,7 @@
 
   .small-radius-styling();
   .set-colors(@color, @bg-color);
+  .set-size(@width, @height);
 
 }
 
@@ -22,4 +21,10 @@
 .set-colors(@color, @bg-color) {
   color: @color;
   background-color: @bg-color;
+}
+
+.set-size(@width, @height)
+{
+  width: @width;
+  height: @height;
 }
